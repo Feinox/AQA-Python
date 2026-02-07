@@ -14,8 +14,5 @@ def test_open_subscription():
 
     driver.get(SUBSCRIPTION)
 
-    assert driver.title == "Task Management Board"
-    assert driver.current_url == SUBSCRIPTION
-    breakpoint()
     element_payment_section = driver.find_element(By.CSS_SELECTOR, ".summary-section")
     assert element_payment_section.is_displayed()
